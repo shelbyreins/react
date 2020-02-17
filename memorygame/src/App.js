@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Game from "./pages/Game";
 import Navbar from "./components/Navbar";
-// import  from "./components/";
-// import  from "./components/";
+import Wrapper from "./components/Wrapper";
+
 
 
 function App() {
@@ -11,10 +11,9 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        {/* <Wrapper> */}
+        <Wrapper>
           <Route exact path="/" component={Game} />
-        {/* </Wrapper>
-        <Footer /> */}
+        </Wrapper>
       </div>
     </Router>
   );

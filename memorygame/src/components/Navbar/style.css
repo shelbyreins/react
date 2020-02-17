@@ -1,0 +1,15 @@
+.navbar{
+    background: #871515;
+    min-height: 70px; 
+    /* position: fixed; */
+    width: 100%;
+    color: #fff;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: grey;
+    text-decoration: none;
+}

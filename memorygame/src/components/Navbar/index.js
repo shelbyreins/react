@@ -5,19 +5,23 @@ import "./style.css";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to="/">
-                Memory Game
-      </Link>
-            <div>
-                <ul className="navbar-nav">
-                    <li className="nav-item center">
-                        Click an image to begin!
-                    </li>
+        <div>
+            <nav className="navbar">
+                <div className="nav-item">
+                    <a href="/">
+                        Memory Game
+                    </a>
+                </div>
 
-                </ul>
-            </div>
-        </nav>
+                <div className="nav-item center">
+                    <Alert/>
+                    </div>
+                <div className="nav-item center">
+                    <Score/>
+                    </div>
+
+            </nav>
+        </div>
     );
 }
 
