@@ -38,7 +38,7 @@
     {
         "id": 8,
         "clicked": false,
-        "image":"./images/eggplant.jpeg"
+        "image":"/images/eggplant.jpeg"
     },
     {
         "id": 9,

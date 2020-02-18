@@ -1,21 +1,20 @@
 import React from "react";
 
-function ImageCard(props) {
+function Card(props) {
 
     return (
-        <div>
-            <div className="card">
+            <div className=" card cardImage">
                 <img 
                 data-clicked={props.clicked} 
                 id={props.id} 
                 className="charImg" 
                 alt={props.name} 
                 src={props.image} 
-                onClick={props.onClick} 
+                onClick={props.handleBtnClick} 
                 />
             </div>
-        </div>
+
     );
 }
 
-export default ImageCard;
+export default Card;
