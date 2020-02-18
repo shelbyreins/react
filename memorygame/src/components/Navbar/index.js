@@ -7,17 +7,17 @@ function Navbar(props) {
     return (
         <div>
             <nav className="navbar">
-                <div className="navLink">
+                <div className="navLink col-md-4">
                     <a href="/">
                         Memory Game
                     </a>
                 </div>
 
-                <div className="nav-item center">
-                    {props.message}
+                <div className="col-md-4">
+                   <div>{props.message}</div> 
                 </div>
-                <div className="nav-item center">
-                    Score: {props.scpre} | Top Score: {props.topScore}
+                <div className="col-md-4">
+                    <div>Score: {props.score} | Top Score: {props.topScore}</div>
                     </div>
 
             </nav>
