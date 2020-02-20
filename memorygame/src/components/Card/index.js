@@ -4,7 +4,7 @@ import "./style.css";
 function Card(props) {
 
     return (
-                <div className="card center">
+                <div className="card ">
                     <div className="cardImage center">
                         <img
                             data-clicked={props.clicked}
