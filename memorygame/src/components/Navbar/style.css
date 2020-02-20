@@ -1,0 +1,24 @@
+.navbar{
+    background: #871515;
+    min-height: 70px; 
+    /* position: fixed; */
+    width: 100%;
+    color: #fff;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: grey;
+    text-decoration: none;
+}
+
+
+.nav-item {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
