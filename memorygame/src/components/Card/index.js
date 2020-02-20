@@ -3,9 +3,8 @@ import React from "react";
 function Card(props) {
 
     return (
-        <div className="container">
-            <div className="row">
-                    <div className=" card cardImage ">
+                <div className="card">
+                    <div className="cardImage">
                         <img
                             data-clicked={props.clicked}
                             id={props.id}
@@ -16,8 +15,8 @@ function Card(props) {
                         />
                     </div>
                 </div>
-            </div>
-        
+     
+
 
     );
 }
