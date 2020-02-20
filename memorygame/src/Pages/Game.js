@@ -18,8 +18,8 @@ class Game extends Component {
     array.sort(() => Math.random() - 0.5);
     for (let i = 0; i < array.length; i++) {
       array[i].id = i;
+    }
   }
-}
 
   componentDidMount() {
     let imageArr = this.state.images;
@@ -31,7 +31,7 @@ class Game extends Component {
 
     // const imageArr = this.state.images
     // const clickedImage = this.state.images.filter(player => player.id === id)
-   
+
     // if(clickedImage[0].clicked){
     //   this.sortCards(imageArr);
     // }
@@ -41,19 +41,19 @@ class Game extends Component {
       imageArr[id].clicked = true;
       this.sortCards(imageArr);
       if (this.state.score >= this.state.topScore)
-        return this.setState({ 
-          images: imageArr, 
-          score: this.state.score + 1, 
-          topScore: this.state.topScore + 1, 
-          message: "You guessed correctly!" 
+        return this.setState({
+          images: imageArr,
+          score: this.state.score + 1,
+          topScore: this.state.topScore + 1,
+          message: "You guessed correctly!"
         })
     } else {
       imageArr.map(val => val.clicked = false);
       this.sortCards(imageArr);
-      this.setState({ 
-        images: imageArr, 
-        score: 0, 
-        message: "You guessed incorrectly" 
+      this.setState({
+        images: imageArr,
+        score: 0,
+        message: "You guessed incorrectly"
       })
     }
   }
@@ -71,17 +71,24 @@ class Game extends Component {
           <h2>Click on an image to earn points, but don't click on any more than once!</h2>
         </Hero>
         <Wrapper>
-            {this.state.images.map(image => (
-              <Card
-                id={image.id}
-                key={image.id}
-                clicked={image.clicked}
-                image={image.image}
-                onClick={() => this.handleBtnClick(image.id)}
-              />
-            ))}
-          </Wrapper>
-        </div>
+          <div className="container center">
+            <div className="row center">
+             
+                {this.state.images.map(image => (
+                  <Card
+                    id={image.id}
+                    key={image.id}
+                    clicked={image.clicked}
+                    image={image.image}
+                    onClick={() => this.handleBtnClick(image.id)}
+                  />
+                ))}
+            
+            </div>
+          </div>
+        </Wrapper>
+
+      </div>
     );
   }
 
