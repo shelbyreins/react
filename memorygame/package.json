@@ -1,7 +1,7 @@
 {
   "name": "memorygame",
   "version": "0.1.0",
-  "homepage": "https://shelbyreins.github.io/react/",
+  "homepage": "https://shelbyreins.github.io",
   "private": true,
   "engines": {
     "npm": "6.10.3",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
