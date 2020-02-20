@@ -39,13 +39,13 @@ class Game extends Component {
           topScore: this.state.topScore + 1,
           message: "You guessed correctly!"
         })
-        return this.setState({
-          images: imageArr,
-          score: this.state.score + 1,
-          message: "You guessed correctly!"
-        })
-    } 
-    else {
+      return this.setState({
+        images: imageArr,
+        score: this.state.score + 1,
+        message: "You guessed correctly!"
+      })
+
+    } else {
       imageArr.map(val => val.clicked = false);
       this.sortCards(imageArr);
       this.setState({
@@ -53,8 +53,9 @@ class Game extends Component {
         score: 0,
         message: "You guessed incorrectly"
       })
+
     }
-    
+
   }
 
   render() {
@@ -72,17 +73,17 @@ class Game extends Component {
         <Wrapper>
           <div className="container center">
             <div className="row center">
-             
-                {this.state.images.map(image => (
-                  <Card
-                    id={image.id}
-                    key={image.id}
-                    clicked={image.clicked}
-                    image={image.image}
-                    onClick={() => this.handleBtnClick(image.id)}
-                  />
-                ))}
-            
+
+              {this.state.images.map(image => (
+                <Card
+                  id={image.id}
+                  key={image.id}
+                  clicked={image.clicked}
+                  image={image.image}
+                  onClick={() => this.handleBtnClick(image.id)}
+                />
+              ))}
+
             </div>
           </div>
         </Wrapper>
