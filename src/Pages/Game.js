@@ -28,14 +28,6 @@ class Game extends Component {
   }
 
   handleBtnClick = id => {
-
-    // const imageArr = this.state.images
-    // const clickedImage = this.state.images.filter(player => player.id === id)
-
-    // if(clickedImage[0].clicked){
-    //   this.sortCards(imageArr);
-    // }
-
     var imageArr = this.state.images;
     if (!this.state.images[id].clicked) {
       imageArr[id].clicked = true;
@@ -47,7 +39,13 @@ class Game extends Component {
           topScore: this.state.topScore + 1,
           message: "You guessed correctly!"
         })
-    } else {
+        return this.setState({
+          images: imageArr,
+          score: this.state.score + 1,
+          message: "You guessed correctly!"
+        })
+    } 
+    else {
       imageArr.map(val => val.clicked = false);
       this.sortCards(imageArr);
       this.setState({
@@ -56,6 +54,7 @@ class Game extends Component {
         message: "You guessed incorrectly"
       })
     }
+    
   }
 
   render() {
